@@ -2,7 +2,7 @@
 Approach
 How we cleaned the data
 Interpeted the data
-# Diabetes Data Analysis
+# Phone Data Analysis
 
 ## Proposal:
  
