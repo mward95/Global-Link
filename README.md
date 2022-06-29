@@ -20,12 +20,15 @@ Interpeted the data
 
 To be able to run the jupyter notebook you will need the following imports
 
+- BeautifulSoup
 - Matplotlib
 - Numpy
 - Pandas
 - Scipy.stats
 - Seaborn
+- Splinter
 - Sqlachemy
+
 
 
 ## Usage
@@ -45,9 +48,15 @@ Mariama Diallo https://github.com/diallomt193
 
 Matthew Ward https://github.com/mward95
 
+Christian Tourteau https://github.com/Christ1129
+
+Herman Tucker https://github.com/hermantucker12
+
+
+
 Sources:
 
 https://www.kaggle.com/datasets/alanjo/smartphone-processors-ranking
-
+https://www.pocket-lint.com/phones/news
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/mward95/Team_project_2/blob/main/MIT%20License/MIT%20License.txt)
