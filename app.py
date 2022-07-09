@@ -20,71 +20,75 @@ mongo = PyMongo(app)
 #################################################
 app.config["MONGO_URI"] = "mongodb://localhost:27017/phonebrand"
 mongo = PyMongo(app)
-# Route to renter index.html template using data from Mongo
+# Route to renter projectindex2.html template using data from Mongo
 # note to ***self*** the goal is to take each route and pass the backend data to the front end where the user selects the continent they want to explore
 # home route
 @app.route("/")
 def index():
-    # ww_data = mongo.db.worldwide.find_one()
+    # ww_data = mongo.db.worldwide.find()
     # print(ww_data)
 
-    return render_template("index.html")
+    # return render_template("projectindex2.html")
+    default_data = mongo.db.phone.find()
+    print(default_data)
+
+    return render_template("projectindex2.html", articles=default_data)
 # worlwide
 #################################################
 @app.route("/worldwide")
 def world():
-    ww_data = mongo.db.worldwide.find_one()
+    ww_data = mongo.db.worldwide.find()
     print(ww_data)
-
-    return render_template("index.html", mission_to_mars=ww_data)
+# ***the new html page that we make for the continent***
+    return render_template("projectindex2.html", mission_to_mars=ww_data)
 # africa
 #################################################
 @app.route("/africa")
 def africa():
-    africa_data = mongo.db.africa.find_one()
+    africa_data = mongo.db.africa.find()
     print(africa_data)
 
-    return render_template("index.html", mission_to_mars=africa_data)
+    return render_template("projectindex2.html", mission_to_mars=africa_data)
 # asia
 #################################################
 @app.route("/asia")
 def asia():
-    asia_data = mongo.db.asia.find_one()
+    asia_data = mongo.db.asia.find()
     print(asia_data)
 
-    return render_template("index.html", mission_to_mars=asia_data)
+    return render_template("projectindex2.html", mission_to_mars=asia_data)
 # oceania
 #################################################
 @app.route("/oceania")
 def oceania():
-    oceania_data = mongo.db.oceania.find_one()
+    oceania_data = mongo.db.oceania.find()
     print(oceania_data)
 
-    return render_template("index.html", mission_to_mars=oceania_data)
+    return render_template("projectindex2.html", mission_to_mars=oceania_data)
 # southamerica
 #################################################
 @app.route("/southamerica")
 def southamerica():
-    southamerica_data = mongo.db.southamerica.find_one()
+    southamerica_data = mongo.db.southamerica.find()
     print(southamerica_data)
 
-    return render_template("index.html", mission_to_mars=southamerica_data)
+    return render_template("projectindex2.html", mission_to_mars=southamerica_data)
 # europe
 #################################################
 @app.route("/europe")
 def europe():
-    europe_data = mongo.db.europe.find_one()
+    europe_data = mongo.db.europe.find()
     print(europe_data)
 
-    return render_template("index.html", mission_to_mars=europe_data)
+    return render_template("projectindex2.html", mission_to_mars=europe_data)
 # northamerica
 #################################################
 @app.route("/northamerica")
 def northamerica():
-    northamerica_data = mongo.db.northamerica.find_one()
+    northamerica_data = mongo.db.northamerica.find()
     print(northamerica_data)
 
-    return render_template("index.html", mission_to_mars=northamerica_data)
+    return render_template("projectindex2.html", mission_to_mars=northamerica_data)
   
 # @app.route("/scrape")
 # def scrape():
