@@ -59,6 +59,6 @@ Sources:
 https://www.kaggle.com/datasets/alanjo/smartphone-processors-ranking
 https://www.pocket-lint.com/phones/news
 https://www.geeksforgeeks.org/how-to-make-a-pagination-using-html-and-css/
-
+https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#monthly-202106-202106-map
 ## Badges
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/mward95/Team_project_2/blob/main/MIT%20License/MIT%20License.txt)
