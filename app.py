@@ -35,6 +35,7 @@ def index():
     return render_template("projectindex2.html", articles=default_data)
 # worlwide
 #################################################
+# I call the route from the HTML, and then the route pulls from the database, then renders the next html with the data  
 @app.route("/worldwide")
 def world():
     ww_data = mongo.db.worldwide.find()
