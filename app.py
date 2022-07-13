@@ -5,6 +5,11 @@
 from distutils.log import debug
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
+from flask import jsonify
+from bson.json_util import dumps
+from bson.json_util import loads
+
+
 # import scrape_phone
 
 # Flask Setup
@@ -50,7 +55,18 @@ def africa():
     africa_data = mongo.db.africa.find()
     print(africa_data)
 
-    return render_template("africa.html", phone_link=africa_data)
+    return render_template("africa.html")
+
+@app.route("/api/africa")
+def africa_api():
+    africa_data = mongo.db.africa.find()
+    print(africa_data)
+    return dumps(africa_data)
+
+    # return jsonify("hi")
+
+    # return render_template("africa.html", phone_link=africa_data)
+
 # asia
 #################################################
 @app.route("/asia")
