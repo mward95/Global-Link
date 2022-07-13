@@ -50,7 +50,6 @@ def world():
 # africa
 #################################################
 @app.route("/africa")
-# @app.route("templates\africa.html")
 def africa():
     africa_data = mongo.db.africa.find()
     print(africa_data)
@@ -62,8 +61,6 @@ def africa_api():
     africa_data = mongo.db.africa.find()
     print(africa_data)
     return dumps(africa_data)
-
-    # return jsonify("hi")
 
     # return render_template("africa.html", phone_link=africa_data)
 
@@ -98,7 +95,15 @@ def europe():
     europe_data = mongo.db.europe.find()
     print(europe_data)
 
-    return render_template("europe.html", phone_link=europe_data)
+    return render_template("europe.html")
+
+@app.route("/api/europe")
+def europe_api():
+    europe_data = mongo.db.europe.find()
+    print(europe_data)
+    return dumps(europe_data)
+
+    # return render_template("europe.html", phone_link=europe_data)
 # northamerica
 #################################################
 @app.route("/northamerica")

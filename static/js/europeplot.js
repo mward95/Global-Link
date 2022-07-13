@@ -3,26 +3,26 @@
 let Apple = []
 let Samsung = []
 let Tecno = []
-let Xiaomi = []
-const getAppleData = (africaData) => {
+let Huawei = []
+const getAppleData = (europeData) => {
 
-  if (!africaData?.length) {
+  if (!europeData?.length) {
     return null;
   }
 
- for (let index = 0; index < africaData?.length; index++) {
-  const africa = africaData[index];
+ for (let index = 0; index < europeData?.length; index++) {
+  const europe = europeData[index];
 
-  Apple.push(africa["Apple"])
-  Samsung.push(africa["Samsung"])
-  Tecno.push(africa["Tecno"])
-  Xiaomi.push(africa["Xiaomi"])
+  Apple.push(europe["Apple"])
+  Samsung.push(europe["Samsung"])
+  Tecno.push(europe["Tecno"])
+  Xiaomi.push(europe["Huawei"])
  }
 }
-const fetch_africa = async () => {
+const fetch_europe = async () => {
 
   try {
-   const data = await  fetch("/api/africa").then((res) => res.json());
+   const data = await  fetch("/api/europe").then((res) => res.json());
 
    getAppleData(data);
   //  apple
@@ -39,12 +39,12 @@ const fetch_africa = async () => {
    const avg_tecno = (sum_tecno / Tecno.length) || 0;
    console.log("Tenco_mean" + avg_tecno)
 
-  // Xiaomi
-   const sum_xiaomi = Xiaomi.reduce((a, b) => a + b, 0);
-   const avg_xiaomi = (sum_xiaomi / Xiaomi.length) || 0;
-   console.log("Xiaomi_mean" + avg_xiaomi)
+  // Huawei
+   const sum_huawei = Huawei.reduce((a, b) => a + b, 0);
+   const avg_huawei = (sum_huawei / Huawei.length) || 0;
+   console.log("Huawei_mean" + avg_huawei)
 
-  createbarchart(avg_apple,avg_samsung,avg_tecno,avg_xiaomi)
+  createbarchart(avg_apple,avg_samsung,avg_tecno,avg_huawei)
 
 
   } catch (error) {
@@ -52,31 +52,20 @@ const fetch_africa = async () => {
   }
  }
       
- fetch_africa();
+ fetch_europe();
  console.log("Apple", Apple);
 
-function createbarchart(avg_apple,avg_samsung,avg_tecno, avg_xiaomi)  {
+function createbarchart(avg_apple,avg_samsung,avg_tecno, avg_huawei)  {
 // Make a graph appear
-// Trace1 for africa phone data
-let trace1 =[ {
-  x: ["Apple","Samsung","Tecno","Xiaomi"],
-  y: [avg_apple, avg_samsung, avg_tecno, avg_xiaomi],
+// Trace1 for phone data
+let trace2 =[ {
+  x: ["Apple","Samsung","Tecno","Huawei"],
+  y: [avg_apple, avg_samsung, avg_tecno, avg_huawei],
   text: Apple,
   name: "Apple",
   type: "bar"
 }]
-Plotly.newPlot("barchart",trace1)
-// Trace 2 for the Roman Data
-// let trace2 = {
-//   x: names,
-//   y: romanSearchResults,
-//   text: romanNames,
-//   name: "Roman",
-//   type: "bar"
-// };
-
-// Create data array
-// let data = [trace1, trace2];
+Plotly.newPlot("barchart",trace2)
 
 // Apply a title to the layout
 let layout = {
@@ -98,7 +87,7 @@ let layout = {
 // Render the plot to the div tag with id "plot"
 async function initApp() {
 
-  await fetch_africa();
+  await fetch_europe();
   console.log("Apple" , Apple);
 
   return {
