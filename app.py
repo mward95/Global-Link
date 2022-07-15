@@ -26,8 +26,7 @@ mongo = PyMongo(app)
 #################################################
 app.config["MONGO_URI"] = "mongodb://localhost:27017/phonebrand"
 mongo = PyMongo(app)
-# Route to renter projectindex2.html template using data from Mongo
-# note to ***self*** the goal is to take each route and pass the backend data to the front end where the user selects the continent they want to explore
+
 # home route
 @app.route("/")
 def index():
