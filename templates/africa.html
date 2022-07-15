@@ -3,22 +3,20 @@
 <head>
 <title>PHONE BRANDS</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- PLotly -->
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Greek vs Roman</title>
+<title>Phone Spec Comparasion</title>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<style>
- 
-  </style>
 </head>
   <!-- Bootstrap JavaScript -->
     <!-- jQuery, Popper.js & Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<body>
+    <body>
 
 <!-- Navbar (sit on top) -->
                   <div class="w3-top">
@@ -37,11 +35,12 @@
                               <button class="w3-bar-item w3-button"><a href="oceania">Oceania</a></button>
                               <button class="w3-bar-item w3-button"><a href="northamerica">North America</a></button>
                               <button class="w3-bar-item w3-button"><a href="southamerica">South America</a></button>
-                          
+                              
                             </div>
                           </div>
-                     
-                          <button class="w3-bar-item w3-button"><a href="about">About</a></button>
+                         
+                          <button class="w3-bar-item w3-button"><a href="">News Article</a></button>
+                          <button class="w3-bar-item w3-button"><a href="">About</a></button>
                         </div>
                       </div>
                     </div>
@@ -65,25 +64,43 @@
   <hr>
   <img src="static/Img/Mobile Vendor Market Share Africa between May 2021 and May 2022.png" width="600" height="400" style="width:700px; height: 400px;">
 </div>
+
+<!-- class="vizualization rounded float-left" alt="Mobile Vendor Market Share Africa" -->
+<!-- <div class="w3-col m6 w3-center"> -->
+  <!-- <div id="mobile_vendor-af-monthly-202105-202205" width="400" height="400" style="width:600px; height: 400px;" img src="static/Img/Mobile Vendor Market Share Africa between May 2021 and May 2022.png"> -->
+    <!-- <div id="mobile_vendor-af-monthly-202204-202206-map" width="600" height="400" style="width:600px; height: 400px;"></div>You may change the values of width and height above to resize the chart<p>Source: <a href="static/Img/Mobile Vendor Market Share Africa between May 2021 and May 2022.png">StatCounter Global Stats - Device Vendor Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-af-monthly-202204-202206-map&chartWidth=600"></script> -->
+      <!-- <div id="mobile_vendor-af-monthly-202106-202106" width="450" height="350" style="width:600px; height: 400px;"></div>You may change the values of width and height above to resize the chart<p> <a href="https://gs.statcounter.com/vendor-market-share/mobile/africa/#monthly-202106-202106-bar"></a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-af-monthly-202106-202106&chartWidth=600"></script> -->
+<!-- </div> -->
    
 <!-- map analysis-->
-<div class="w3-col m6 w3-center">
-  <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">Samsung is the most commonly used phone in Africa, its intereting to see the size of Tecnos influence over Apple and Xiaomi from the last 3 months <br>This example also has multiple lines.</p>
+<div class="w3-col m4 w3-center">
+  <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">Samsung is the most commonly used phone in Africa<br>This example also has multiple lines.</p>
 </div>  
-<!-- bar analysis
+<!-- bar analysis-->
  
 <div class="w3-col m4 w3-right">
   <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">First example with text surrounded by a red border.<br>This example also has multiple lines.</p>
-</div> -->
+</div>
 <!-- line analysis-->
-<div class="w3-col m6 w3-center">
-   <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">From the line graph over a year period Samsung shows to be the dominating force in Africa with Apple and Huawei following behind.<br></br></p>
+<div class="w3-col m4 w3-center">
+   <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">First example with text surrounded by a red border.<br>This example also has multiple lines.</p>
 </div>
 
 <!-- Plotly location -->
 <div class="w3-col m12 w3-center">
   <div id="plot"></div>
   <div id="barchart"></div>
-  <script src="static\js\plotsAfrica.js"></script>
+  <script src="static\js\plots.js"></script>
 
+  <!-- <table>
+    {% for key, value in phone_link %}
+
+    <tr>
+       <th> {{ value.Samsung }} </th>
+       <td> {{ value.Apple }} </td>
+    </tr>
+
+    {% endfor %}
+ </table> -->
+  <!-- <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">First example with text surrounded by a red border.<br>This example also has multiple lines.</p> -->
 </div>

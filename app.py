@@ -9,7 +9,6 @@ from flask import jsonify
 from bson.json_util import dumps
 from bson.json_util import loads
 
-import plotly.express as px
 
 # import scrape_phone
 
@@ -63,6 +62,7 @@ def africa_api():
     print(africa_data)
     return dumps(africa_data)
 
+    # return render_template("africa.html", phone_link=africa_data)
 
 # asia
 #################################################
@@ -71,14 +71,7 @@ def asia():
     asia_data = mongo.db.asia.find()
     print(asia_data)
 
-    return render_template("asia.html")
-
-@app.route("/api/asia")
-def asia_api():
-    asia_data = mongo.db.asia.find()
-    print(asia_data)
-    return dumps(asia_data)
-
+    return render_template("asia.html", phone_link=asia_data)
 # oceania
 #################################################
 @app.route("/oceania")
@@ -86,14 +79,7 @@ def oceania():
     oceania_data = mongo.db.oceania.find()
     print(oceania_data)
 
-    return render_template("oceania.html")
-
-@app.route("/api/oceania")
-def oceania_api():
-    oceania_data = mongo.db.oceania.find()
-    print(oceania_data)
-    return dumps(oceania_data)
-
+    return render_template("oceania.html", phone_link=oceania_data)
 # southamerica
 #################################################
 @app.route("/southamerica")
@@ -101,13 +87,7 @@ def southamerica():
     southamerica_data = mongo.db.southamerica.find()
     print(southamerica_data)
 
-    return render_template("southamerica.html")
-
-@app.route("/api/southamerica")
-def southamerica_api():
-    southamerica_data = mongo.db.southamerica.find()
-    print(southamerica_data)
-    return dumps(southamerica_data)
+    return render_template("southamerica.html", phone_link=southamerica_data)
 # europe
 #################################################
 @app.route("/europe")
@@ -122,6 +102,7 @@ def europe_api():
     europe_data = mongo.db.europe.find()
     print(europe_data)
     return dumps(europe_data)
+
     # return render_template("europe.html", phone_link=europe_data)
 # northamerica
 #################################################
@@ -130,18 +111,8 @@ def northamerica():
     northamerica_data = mongo.db.northamerica.find()
     print(northamerica_data)
 
-    return render_template("northamerica.html")
-
-@app.route("/api/northamerica")
-def northamerica_api():
-    northamerica_data = mongo.db.northamerica.find()
-    print(northamerica_data)
-    return dumps(northamerica_data)
-    
-@app.route("/about")
-def about():
-    return render_template("about.html")
-
+    return render_template("northamerica.html", phone_link=northamerica_data)
+  
 if __name__ == "__main__":
     app.run(debug=True)
 
