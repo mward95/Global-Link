@@ -65,7 +65,7 @@ https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#monthly-202106-
 
 https://leafletjs.com/
 
-Tools & languages: JavaScript, HTML, CSS, Python Flask, Jupyter Notebook, MongoDB
+Tools & languages: JavaScript, HTML, Python Flask, Jupyter Notebook, MongoDB
 
 
 ## Extract, Transform, Load:
