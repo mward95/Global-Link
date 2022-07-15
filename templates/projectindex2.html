@@ -9,6 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Greek vs Roman</title>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+  ol {
+    background-color: #757574;
+  }
+  </style>
 </head>
   <!-- Bootstrap JavaScript -->
     <!-- jQuery, Popper.js & Bootstrap JS -->
@@ -34,12 +39,11 @@
                               <button class="w3-bar-item w3-button"><a href="oceania">Oceania</a></button>
                               <button class="w3-bar-item w3-button"><a href="northamerica">North America</a></button>
                               <button class="w3-bar-item w3-button"><a href="southamerica">South America</a></button>
-                              
+                          
                             </div>
                           </div>
-                         
-                          <!-- <button class="w3-bar-item w3-button"><a href="">News Article</a></button> -->
-                          <button class="w3-bar-item w3-button"><a href="">About</a></button>
+                     
+                          <button class="w3-bar-item w3-button"><a href="about">About</a></button>
                         </div>
                       </div>
                     </div>
@@ -55,8 +59,8 @@
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
 
-  <!-- Charts Section -->
-  <div class="w3-container w3-padding-32" id="charts">
+   <!-- Charts Section -->
+   <div class="w3-container w3-padding-32" id="charts">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Chart</h3>
   </div>
 
@@ -72,6 +76,7 @@
   <div class="w3-col m6 w3-right">
  <br><br><br><br><br><br><br><br><br> <p style="border:3px; border-style:solid; border-color:#585656; padding: 1em;">This graph shows the number of SoCs made by companies among top performing devices. SoCs stand for 'system-ona-chip' and it pretty much represents the brain of our smartphones. An SoC contains multiple processing parts, memory, modems, and other essential bits and pieces manufactured together in a single chip that is soldered onto the circuit board. In this graph you can see that qualcomm has created more SoCs than all other companies, and that is because other companies use qualcomm's SoCs.</p>
   </div>     
+
 
   <!-- News Article Section with carousel -->
   <!-- used mongodb and the flask route to make the carousel work -->
@@ -92,14 +97,14 @@
             </div>
           {% endfor %}
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <ol class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        </ol>
+        <ol class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </ol>
       </div>
  
     </center>
@@ -118,10 +123,11 @@
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <!-- target="_blank" allows the website to open in a new tab so it does not remove you from where you are -->
-      <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Matthew" style="width:50%">
+      <img src="static\Img\matt.png" alt="Matthew" style="width:50%">
+      <!-- <img src="" alt="Matthew" style="width:50%"> -->
       <h3>Matthew Ward</h3><a href="https://github.com/mward95" target="_blank"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Matthew" style="width:8%"></a><a href="https://www.linkedin.com/in/matthew-chandler-ward/" target="_blank"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt="Matthew" style="width:8%"></a>
       <p class="w3-opacity"> Team Member</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Helped with carousel creation, created plotly bar graphs, help create flask pathways, created scraping tool to gather data from news site, helped with website creation and final design.Transformed the data using Pandas.</p>
   
       
     </div>
@@ -129,28 +135,28 @@
       <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Mariama" style="width:50%">
       <h3>Mariama Diallo</h3><a href="https://github.com/diallomt193" target="_blank"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Matthew" style="width:8%"></a><a href="https://www.linkedin.com" target="_blank"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt="Mariama" style="width:8%"></a>
       <p class="w3-opacity">Team Member</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Converted data to .csv and loaded data into MongoDB. Created Graphical images from the data. Helped With Flask pathways. Transformed the data using Pandas.</p>
       
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Christian" style="width:50%">
       <h3>Christian Tourteau</h3><a href="https://github.com/Christ1129" target="_blank"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Matthew" style="width:8%"></a><a href="https://www.linkedin.com/in/christian-t-8805491a8/" target="_blank"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt="Christian" style="width:8%"></a>
       <p class="w3-opacity">Team Member</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Helped with code research and concept design. Helped with webiste layout and final look.</p>
       
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Christian" style="width:50%">
       <h3>Herman Tucker</h3><a href="https://github.com/hermantucker12" target="_blank"><img src="https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU" alt="Matthew" style="width:8%"></a><a href="https://www.linkedin.com" target="_blank"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw"  alt="Herman" style="width:8%"></a>
       <p class="w3-opacity">Team Member</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p>Created the frame work of the website. Worked on nav bar so that there is a drop down menu. Helped with website layout</p>
       
     </div>
   </div>
 
 </div>
 
-
+  
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
