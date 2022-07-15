@@ -63,7 +63,7 @@ https://www.geeksforgeeks.org/how-to-make-a-pagination-using-html-and-css/
 
 https://gs.statcounter.com/vendor-market-share/mobile/worldwide/#monthly-202106-202106-map
 
-https://leafletjs.com/
+https://www.w3schools.com/w3css/default.asp
 
 Tools & languages: JavaScript, HTML, Python Flask, Jupyter Notebook, MongoDB
 
