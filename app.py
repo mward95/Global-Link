@@ -137,7 +137,10 @@ def northamerica_api():
     northamerica_data = mongo.db.northamerica.find()
     print(northamerica_data)
     return dumps(northamerica_data)
-
+    
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
