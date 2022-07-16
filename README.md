@@ -67,10 +67,14 @@ Tools & languages: JavaScript, HTML, Python Flask, Jupyter Notebook, MongoDB
 
 ## Extract, Transform, Load:
 1 – Extraction:
-Once we agreed on the data to use, we saved the csv files for sections 1 and 2 in a folder then stored the files into dataframes using pandas. For section 3, we used beautifulsoup to scrape the website to pull data out of the HTML and parse it from the page source code which allowed the data extraction.
+ The data was saved as csv files for sections 1 and 2 in a folder then stored the files into dataframes using pandas. For section 3, we used beautifulsoup to scrape the website to pull data out of the HTML and parse it from the page source code which allowed the data extraction.
 
 2 – Transformation:
-In sections 1 and 2, the transformation process involved using the dataframes created from pandas to create both bar and line graphs. Once the dataframes were created for each continent, not all the columns were visible due the number of columns in the dataset. This issue was fixed by applying the following code: pd.set_option(‘max_columns’, None) and this allowed us to scroll through the table and see all the columns. Next we did a .count to inspect the data and make sure that we have nothing missing within the set.
+In sections 1 and 2, the transformation process involved using the dataframes created from pandas to create both bar and line graphs. Once the dataframes were created for each continent, not all the columns were visible due the number of columns in the dataset. This issue was fixed by applying the 
+```
+following code: pd.set_option(‘max_columns’, None) 
+```
+and this allowed us to scroll through the table and see all the columns. Next we did a .count to inspect the data and make sure that we have nothing missing within the set.
 
 a-   Line graphs were created in section 1 for each continent to look at the top 7 mobile phones utilized the most in each region within a year period (between May 2021 and May 2022).
 
@@ -79,6 +83,7 @@ Section 3, in this case the transformation was completed with the use of beautif
 
 3- Load:
 We loaded our data in MongoDB using PyMongo. First, we connected to the local database using conn = ‘mongodb://localhost:27017’, then we created a database named phonebrand. Next, we added tables within that database where we loaded all our data including the csv confirmed dataframes and scraped data. Once we confirmed that the data was in the database, we moved to the next steps which involved creating flask routes.
+
 First, we created the app.py file where we defined all the routes and functions to perform for each action. Then, we connected routes to all the data in the database and created html files for each as well as the original index.html file. Using the routes, we would call from the html to pull data from the database then render the next html file with data.
 
 
@@ -91,7 +96,6 @@ First, we created the app.py file where we defined all the routes and functions 
  
  ![image](https://i.gyazo.com/8115031294cc757b617c8939448ebc9b.png)
  
- Data set used and how we manipulated them
 
 ## Features
 carsousel
