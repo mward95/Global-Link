@@ -76,8 +76,8 @@ a-   Line graphs were created in section 1 for each continent to look at the top
 
 b-   A bar graph was created in section 2 to show the number of SoCs produced by companies among top performing devices. In the graph you can see that qualcomm has created more SoCs than all other companies, and that is because other companies use QUALCOMM’s SoCs.
 Section 3, in this case the transformation was completed with the use of beautiful soup to parse the HTML file then extract the data. Our vision was to create a carousel which will display phone related information whenever we scrolled through. To achieve this goal, we first created a list of dictionaries which would hold the data scraped from the URL page including news_title, news_paragraph, url_link and some news_pic then used a for loop to print the information.
-3- Load
 
+3- Load:
 We loaded our data in MongoDB using PyMongo. First, we connected to the local database using conn = ‘mongodb://localhost:27017’, then we created a database named phonebrand. Next, we added tables within that database where we loaded all our data including the csv confirmed dataframes and scraped data. Once we confirmed that the data was in the database, we moved to the next steps which involved creating flask routes.
 First, we created the app.py file where we defined all the routes and functions to perform for each action. Then, we connected routes to all the data in the database and created html files for each as well as the original index.html file. Using the routes, we would call from the html to pull data from the database then render the next html file with data.
 
@@ -108,11 +108,7 @@ plotly graph
 
 ## Future Considerations
 
-
-
-
-
-
+In the future, we would implement a heat map to display the data for phone usage for each continent. It would be a cool interactive way to display how different phone brands are used globally. Another thing we would like to do in the future is also compare different computer brands people use. Do people with an Apple phone have a Mac or Windows? That would be an interesting data set to visualize if phone brands and computer brands are correlated.
 
 ## Credits
 Team members:
@@ -124,8 +120,6 @@ Matthew Ward https://github.com/mward95
 Christian Tourteau https://github.com/Christ1129
 
 Herman Tucker https://github.com/hermantucker12
-
-##Future Updates
 
 
 
