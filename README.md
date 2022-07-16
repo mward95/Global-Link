@@ -1,5 +1,5 @@
 # Global Link
- ![image]()
+
 https://github.com/mward95/Global-Link
 
 ## Table of Contents
